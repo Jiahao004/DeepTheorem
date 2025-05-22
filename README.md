@@ -70,6 +70,4 @@ The dataset also includes **verifiable theorem variants**, systematically constr
 The RL-Zero strategy is a reinforcement learning approach tailored for informal theorem proving 🤖. It leverages the dataset’s verified theorem variants to incentivize robust mathematical inference 💡.
 
 - **Implementation** 🛠️: Available in the `models/` directory. See [RL-Zero Documentation](#) for details.
-- **Training** 🚂:
-
-See [`scripts/README.md`](scripts/README.md) for details.
+- **Training** 🚂: See [`scripts/README.md`](scripts/README.md) for details.
