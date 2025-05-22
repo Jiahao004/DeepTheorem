@@ -10,7 +10,7 @@ Theorem proving is a critical benchmark for evaluating complex reasoning in LLMs
    - Contains **138K high-quality, IMO-level informal theorems and proofs** across diverse mathematical domains 📚.
    - Rigorously annotated for correctness, difficulty, and topic categories ✅.
    - Includes systematically constructed **verifiable theorem variants** for robust evaluation 🔍.
-   - [Dataset Link](#) 🔗.
+   - [Dataset Link](https://huggingface.co/datasets/Jiahao004/DeepTheorem) 🔗.
 
 2. **RL-Zero** 🤖: 
    - A novel **reinforcement learning strategy** tailored for informal theorem proving ⚙️.
@@ -27,14 +27,14 @@ Theorem proving is a critical benchmark for evaluating complex reasoning in LLMs
 ## Performance 🚀
 Deeptheorem achieves the #Rank 5 position along all the commerical models and open source models.
 
-| **Model**             | **FIMO** |         | **HMMT** |         | **Putnam** |         | **Avg.** |         | **\#Rank** |         |
-| :--------------------- | :------: | :-----: | :------: | :-----: | :--------: | :-----: | :------: | :-----: | ---------: | ------: |
-|                        | *out.*   | *proc.* | *out.*   | *proc.* | *out.*     | *proc.* | *out.*   | *proc.* | *out.*     | *proc.* |
-| Gemini2\.5-Pro         | 57\.14   | 54\.06  | 57\.63   | 49\.82  | 64\.58     | 58\.75  | 59\.78   | 54\.21  | 2          | 3       |
-| o1-mini                | 60\.32   | 55\.23  | 35\.59   | 30\.90  | 61\.46     | 52\.88  | 52\.46   | 46\.34  | 4          | 4       |
-| o1                     | 66\.67   | 61\.00  | 47\.46   | 47\.30  | 62\.50     | 57\.55  | 58\.88   | 55\.28  | 3          | 2       |
-| o3-mini                | 80\.95   | 77\.61  | 45\.76   | 43\.47  | 78\.12     | 75\.12  | 68\.28   | 65\.40  | 1          | 1       |
-| *DeepTheorem-RL-7B     | 55\.56   | 39\.07  | 28\.81   | 20\.85  | 57\.29     | 42\.20  | 47\.22   | 34\.04  | 5          | 5       |
+| **Model**             | **FIMO** |         | **HMMT** |         | **Putnam** |         | **Avg.(\#Rank)** |         |
+| :--------------------- | :------: | :-----: | :------: | :-----: | :--------: | :-----: | :------: | :-----: |
+|                        | *out.*   | *proc.* | *out.*   | *proc.* | *out.*     | *proc.* | *out.*   | *proc.* |
+| Gemini2\.5-Pro         | 57\.14   | 54\.06  | 57\.63   | 49\.82  | 64\.58     | 58\.75  | 59\.78(\#2)   | 54\.21(\#3)  |
+| o1-mini                | 60\.32   | 55\.23  | 35\.59   | 30\.90  | 61\.46     | 52\.88  | 52\.46(\#4)   | 46\.34(\#4)  |
+| o1                     | 66\.67   | 61\.00  | 47\.46   | 47\.30  | 62\.50     | 57\.55  | 58\.88(\#3)   | 55\.28(\#2)  |
+| o3-mini                | 80\.95   | 77\.61  | 45\.76   | 43\.47  | 78\.12     | 75\.12  | 68\.28(\#1)   | 65\.40(\#1)  |
+| *DeepTheorem-RL-7B     | 55\.56   | 39\.07  | 28\.81   | 20\.85  | 57\.29     | 42\.20  | 47\.22(\#5)   | 34\.04(\#5)  |
 
 
 
