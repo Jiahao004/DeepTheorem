@@ -71,5 +71,5 @@ The RL-Zero strategy is a reinforcement learning approach tailored for informal 
 
 - **Implementation** 🛠️: Available in the `models/` directory. See [RL-Zero Documentation](#) for details.
 - **Training** 🚂:
-  ```bash
-  python scripts/train_rl_zero.py --dataset data/theorems.json --output models/rl_zero_model
+
+See [`scripts/README.md`](scripts/README.md) for details.
