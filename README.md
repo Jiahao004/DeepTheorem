@@ -28,12 +28,10 @@ Theorem proving is a critical benchmark for evaluating complex reasoning in LLMs
 2. **RL-Zero** 🤖: 
    - A novel **reinforcement learning strategy** tailored for informal theorem proving ⚙️.
    - Utilizes verified theorem variants to incentivize robust mathematical inference 💡.
-   - [RL-Zero Documentation](#) (e.g., see the RL-Zero methodology [here](#)) 📄.
 
 3. **Comprehensive Evaluation Metrics** 📈:
    - Outcome metrics to assess proof correctness ✔️.
    - Process metrics to evaluate the quality of reasoning steps 🛠️.
-   - [Evaluation Metrics Details](#) (e.g., explore evaluation scripts [here](#)) 🔎.
 
 
 
@@ -84,3 +82,35 @@ The RL-Zero strategy is a reinforcement learning approach tailored for informal 
 
 - **Implementation** 🛠️: Available in the `models/` directory. See [RL-Zero Documentation](#) for details.
 - **Training** 🚂: See [`scripts/README.md`](scripts/README.md) for details.
+
+
+## Example: Proofs from DeepTheorem Models
+
+### Problem
+
+Let \( P(x) \) be a polynomial of degree \( n > 1 \) with integer coefficients, and let \( k \) be any positive integer. Define the polynomial \( Q(x) = P(P(\ldots P(P(x)) \ldots)) \) with \( k \) pairs of parentheses (i.e., the \( k \)-th iterate of \( P \)). Prove or disprove that \( Q(x) \) has more than \( n \) integer fixed points, where an integer fixed point satisfies \( Q(x) = x \).
+
+### Model Response
+```
+<think>
+ 
+To determine whether the polynomial \( Q(x) = P(P(\ldots P(P(x)) \ldots)) \) with \( k \) pairs of parentheses has more than \( n \) integer fixed points, we need to analyze the properties of the polynomial \( P \) and how the composition of \( P \) affects its fixed points.\\
+
+First, recall that \( P(x) \) is a polynomial of degree \( n > 1 \) with integer coefficients. The number of integer roots of \( P(x) - x = 0 \) (i.e., the number of integer fixed points of \( P \)) is at most \( n \) by the fundamental theorem of algebra and properties of polynomials. Let's denote the integer fixed points of \( P \) by \( r_1, r_2, \ldots, r_m \), where \( m \leq n \).\\
+
+Now, consider the polynomial \( Q(x) = P(P(\ldots P(P(x)) \ldots)) \) with \( k \) pairs of parentheses. We need to determine the number of integer solutions to the equation \( Q(x) = x \). If \( r \) is an integer fixed point of \( Q \), then \( r \) must be an integer fixed point of some composition of \( P \). Specifically, if \( r \) is a fixed point of \( Q \), there exists some \( m \leq k \) such that \( P^{(m)}(r) = r \), where \( P^{(m)} \) denotes the \( m \)-th iterate of \( P \).\\
+
+The key observation is that the number of integer fixed points of \( Q \) is bounded by the number of integer preperiodic points of \( P \). Since \( P \) is a polynomial of degree \( n \), the number of integer preperiodic points of \( P \) is at most \( n \) for each iterate. However, we need to consider the composition \( Q \) which is the \( k \)-th iterate of \( P \).\\
+
+The polynomial \( Q(x) \) is also of degree \( n^k \), and the number of integer roots of \( Q(x) - x = 0 \) is at most \( n^k \). However, we need to check if it is possible for \( Q(x) \) to have more than \( n \) integer fixed points. Since each application of \( P \) can introduce at most \( n \) new fixed points, the total number of integer fixed points of \( Q \) is still bounded by the number of preperiodic points of \( P \), which is at most \( n \) for each iterate.\\
+
+To be more precise, let's consider the fixed points. If \( r \) is a fixed point of \( Q \), then \( r \) must be a root of the polynomial \( P^k(x) - x \). The polynomial \( P^k(x) - x \) is of degree \( n^k \), and by the fundamental theorem of algebra, it can have at most \( n^k \) roots. However, we are interested in integer roots, and the number of integer roots is at most the number of integer preperiodic points of \( P \), which is at most \( n \) for each iterate.\\
+
+Therefore, the number of integer fixed points of \( Q(x) \) is at most \( n \), the same as the number of integer fixed points of \( P \) for each iterate. Hence, \( Q(x) \) cannot have more than \( n \) integer fixed points.\\
+
+Thus, the statement that \( Q \) has more than \( n \) integer fixed points is false.
+
+</think>
+
+<answer> \boxed{disproved} </answer>
+```
