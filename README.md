@@ -19,13 +19,13 @@ Welcome to the GitHub repository for **DeepTheorem** 🎉, a comprehensive frame
 
 Theorem proving is a critical benchmark for evaluating complex reasoning in LLMs 🧠. However, formal proof systems often misalign with the informal, natural language knowledge LLMs acquire during pre-training. DeepTheorem addresses this gap by introducing:
 
-1. **A Large-Scale Benchmark Dataset** 📊: 
-   - Contains **138K high-quality, IMO-level informal theorems and proofs** across diverse mathematical domains 📚.
+1. **A Large-Scale Theorem Dataset** 📊: 
+   - Contains **121K high-quality, IMO-level informal theorems and proofs** across diverse mathematical domains 📚.
    - Rigorously annotated for correctness, difficulty, and topic categories ✅.
    - Includes systematically constructed **verifiable theorem variants** for robust evaluation 🔍.
    - [Dataset Link](https://huggingface.co/datasets/Jiahao004/DeepTheorem) 🔗.
 
-2. **RL-Zero** 🤖: 
+2. **RL-Zero Training Pipeline** 🤖: 
    - A novel **reinforcement learning strategy** tailored for informal theorem proving ⚙️.
    - Utilizes verified theorem variants to incentivize robust mathematical inference 💡.
 
@@ -63,7 +63,7 @@ Deeptheorem achieves the #Rank 5 position along all the commerical models and op
 
 ## DeepTheorem Dataset 📊
 
-The DeepTheorem dataset comprises **138K IMO-level informal theorems and proofs** spanning diverse mathematical domains 🌐. Each theorem-proof pair is rigorously annotated for:
+The DeepTheorem dataset comprises **121K IMO-level informal theorems and proofs** spanning diverse mathematical domains 🌐. Each theorem-proof pair is rigorously annotated for:
 - **o3-mini Proofs** 🖋️: Ensuring mathematical accuracy through proofs generated or verified by the o3-mini model ✅.
 - **Truth Value** 🔍: The truth value of the theorem extracted from the o3-mini proofs, indicating whether the theorem is true or false ✔️.
 - **Difficulty** 🎚️: Categorized by complexity to suit various LLM capabilities 🧩.
