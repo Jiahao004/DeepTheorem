@@ -1,8 +1,21 @@
 # DeepTheorem: Advancing LLM Reasoning for Theorem Proving Through Natural Language and Reinforcement Learning 🚀
 
+
+
+
+<p align="center">
+<img src="images/overview.png" width="800" />
+</p>
+
 Welcome to the GitHub repository for **DeepTheorem** 🎉, a comprehensive framework for enhancing large language model (LLM) mathematical reasoning through informal, natural language-based theorem proving. This project introduces a novel approach to automated theorem proving (ATP) by leveraging the informal reasoning strengths of LLMs, moving beyond traditional formal proof systems 🌟.
 
+
+
 ## Overview 📖
+
+
+
+
 
 Theorem proving is a critical benchmark for evaluating complex reasoning in LLMs 🧠. However, formal proof systems often misalign with the informal, natural language knowledge LLMs acquire during pre-training. DeepTheorem addresses this gap by introducing:
 
