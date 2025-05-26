@@ -45,7 +45,9 @@ Deeptheorem achieves the #Rank 5 position along all the commerical models and op
 | o1-mini                | 60\.32   | 55\.23  | 35\.59   | 30\.90  | 61\.46     | 52\.88  | 52\.46(\#4)   | 46\.34(\#4)  |
 | o1                     | 66\.67   | 61\.00  | 47\.46   | 47\.30  | 62\.50     | 57\.55  | 58\.88(\#3)   | 55\.28(\#2)  |
 | o3-mini                | 80\.95   | 77\.61  | 45\.76   | 43\.47  | 78\.12     | 75\.12  | 68\.28(\#1)   | 65\.40(\#1)  |
-| *DeepTheorem-RL-7B     | 55\.56   | 39\.07  | 28\.81   | 20\.85  | 57\.29     | 42\.20  | 47\.22(\#5)   | 34\.04(\#5)  |
+| *[DeepTheorem-RL-7B](https://huggingface.co/Jiahao004/DeepTheorem-qwen-7b-rl)     | 55\.56   | 39\.07  | 28\.81   | 20\.85  | 57\.29     | 42\.20  | 47\.22(\#5)   | 34\.04(\#5)  |
+| *[DeepTheorem-RL-3B](https://huggingface.co/Jiahao004/DeepTheorem-qwen-3b-rl)     | 38\.10   | 23\.39  | 25\.42   | 13\.56  | 52\.08     | 33\.84  | 38\.53        | 23.60        | 
+| *[DeepTheorem-RL-1.5B](https://huggingface.co/Jiahao004/DeepTheorem-qwen-1.5b-rl)   | 31\.75   | 15\.23  | 23\.73   | 10\.15  | 52\.08     | 22\.79  | 35\.85        | 16.06        | 
 
 
 
@@ -84,14 +86,20 @@ The RL-Zero strategy is a reinforcement learning approach tailored for informal 
 - **Training** 🚂: See [`scripts/README.md`](scripts/README.md) for details.
 
 
+
+
 ## Example: Proofs from DeepTheorem Models
 
 ### Problem
-
+```python3
+"""
 Let \( P(x) \) be a polynomial of degree \( n > 1 \) with integer coefficients, and let \( k \) be any positive integer. Define the polynomial \( Q(x) = P(P(\ldots P(P(x)) \ldots)) \) with \( k \) pairs of parentheses (i.e., the \( k \)-th iterate of \( P \)). Prove or disprove that \( Q(x) \) has more than \( n \) integer fixed points, where an integer fixed point satisfies \( Q(x) = x \).
-
-### Model Response
+"""
 ```
+### Model Response
+
+```python3
+"""
 <think>
  
 To determine whether the polynomial \( Q(x) = P(P(\ldots P(P(x)) \ldots)) \) with \( k \) pairs of parentheses has more than \( n \) integer fixed points, we need to analyze the properties of the polynomial \( P \) and how the composition of \( P \) affects its fixed points.\\
@@ -113,4 +121,5 @@ Thus, the statement that \( Q \) has more than \( n \) integer fixed points is f
 </think>
 
 <answer> \boxed{disproved} </answer>
+"""
 ```
