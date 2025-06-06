@@ -84,7 +84,7 @@ The RL-Zero strategy is a reinforcement learning approach tailored for informal 
 
 - **Implementation** 🛠️: Available in the `models/` directory. See [RL-Zero Documentation](#) for details.
 - **Training** 🚂: See [`scripts/README.md`](scripts/README.md) for details.
-
+- **Evaluation** 🧐: FIMO, HMMT, and Putnam Bench is at ['eval/data/*'](eval/data). Also available at [Jiahao004/HMMT_FIMO_Putnam](https://huggingface.co/datasets/Jiahao004/HMMT_FIMO_Putnam) you can also test your own models with our testing set.
 
 
 
